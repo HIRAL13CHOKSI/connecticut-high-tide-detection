@@ -42,6 +42,14 @@ I independently developed the analysis, from preparing the tidal data and design
 
 *Metrics are reproduced from the project report and compare model times with NOAA **predictions**, not observed flood events. The report describes positive bias as the model predicting earlier than NOAA. Its references to the validation period differ, so the period and sample size still need confirmation.*
 
+### Additional findings from the report
+
+- **Coverage across locations:** all 16 monitoring sites received the same zone assignment from the geofence and nearest-zone checks.
+- **Why adaptive thresholds mattered:** in the report's December 2025 example, the regional threshold produced one exceedance in Zone 2 and none in Zone 3. After zone-specific fallback, both had at least three selected events.
+- **Timing differences:** the report describes differences of 2–11 minutes for Zone 2 and 1–6 minutes for Zone 3 in the comparison illustrated.
+
+These are reported project findings; selection counts and timing comparisons should be interpreted in the context of the specified analysis and the validation-period uncertainty above.
+
 ## Skills demonstrated
 
 **Data science:** data cleaning, percentile-based event selection, statistical validation, time-series visualization  
