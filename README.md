@@ -31,6 +31,10 @@ The project report gives the following comparison with NOAA **predicted** high-t
 
 The report describes positive bias as the model timing earlier than the NOAA prediction. The report refers to both December 2025 and a full-year comparison; the validation period and sample size should be confirmed before publication.
 
+![Timing comparison chart](assets/timing_comparison.png)
+
+*Chart recreated from the report’s summary metrics. Validation period and sample size remain to be confirmed.*
+
 ## Research report
 
 The full research report is available privately upon request.
