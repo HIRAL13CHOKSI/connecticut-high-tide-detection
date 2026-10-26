@@ -31,9 +31,9 @@ The project report gives the following comparison with NOAA **predicted** high-t
 
 The report describes positive bias as the model timing earlier than the NOAA prediction. The report refers to both December 2025 and a full-year comparison; the validation period and sample size should be confirmed before publication.
 
-## Full report
+## Research report
 
-[Read the high-tide project report](High_Tide_Report.pdf) for the methodology, figures, tables, and validation discussion.
+The full research report is available privately upon request.
 
 ## Tools and skills
 
