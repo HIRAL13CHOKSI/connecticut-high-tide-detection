@@ -31,6 +31,26 @@ I independently developed the analysis, from preparing the tidal data and design
 4. **Map monitoring sites:** assign 16 locations to zones and check against nearest-zone distances.
 5. **Compare timing:** match selected events to NOAA-predicted high tides on the same day.
 
+## Monitoring locations and tidal zones
+
+The framework connects modeled tidal zones with 16 monitoring points in southeastern Connecticut.
+
+![Map of the 16 coastal monitoring points](assets/monitoring_sites.jpg)
+
+*Monitoring-site map from the high-tide report. The original map is interactive; this is a static image.*
+
+| Town | Monitoring points named in the report |
+|---|---|
+| Stonington | Downtown Mystic; Lord's Point; Rte 1 (Bike store); Mason's Land (two points); Dodge Paddock |
+| Groton | Jupiter Point; River road; Underpass near airport; Groton Long Point (two points); Five corners |
+| New London | Fort Trumbull; Greens Harbor Beach – Fort Trumbull; Bank Street; Intersection of Montauk and Bank |
+
+The two repeated names represent distinct monitoring points in the report. These locations are linked to **zone-specific modeled tide predictions**.
+
+![Map showing tidal-zone geofences and monitoring sites](assets/tidal_zones.jpg)
+
+*Zone geofences, zone centroids (green stars), and monitoring points (red markers), reproduced from the report.*
+
 ## Results: timing comparison
 
 | Validation zone | Mean absolute difference | Root mean square difference | Reported bias |
