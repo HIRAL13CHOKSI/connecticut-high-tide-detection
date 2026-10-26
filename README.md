@@ -1,52 +1,55 @@
-# High-Tide Detection for Coastal Monitoring in Connecticut
+# Coastal High-Tide Detection & Validation
 
-**Research by Hiral Choksi | Graduate Research Assistant, CIRCA | Advisor: Dr. Yaprak Onat**
+**Python · Statistical analysis · Geospatial mapping · Time-series validation**
 
-## Overview
+I built an automated, zone-aware framework to identify unusually high modeled tides and connect them to coastal monitoring sites in Connecticut. The project combines statistical event selection, geographic analysis, and a comparison with NOAA tide predictions.
 
-How can coastal monitoring teams identify unusually high tides across locations with different tidal behavior? I developed an automated, zone-aware framework that processes modeled water levels, identifies candidate high-tide events, connects them to monitoring locations, and compares their timing with NOAA tide predictions.
+**Role:** Graduate Research Assistant, Connecticut Institute for Resilience and Climate Adaptation (CIRCA)  
+**Research and implementation:** Hiral Choksi  
+**Advisor:** Dr. Yaprak Onat
 
-This work was completed as part of my graduate research assistantship at the Connecticut Institute for Resilience and Climate Adaptation (CIRCA), under the guidance of Dr. Yaprak Onat.
+## Project at a glance
+
+- **4 tidal zones** analyzed using hourly modeled water levels.
+- **16 coastal monitoring sites** connected to tidal zones across Groton, New London, and Stonington.
+- **2 zones** compared with NOAA-predicted high-tide times.
+- **3.75 and 7.00 minutes:** reported mean absolute timing differences for Zones 3 and 2, respectively.
+
+## The challenge
+
+Coastal areas do not experience tides in the same way. A single regional cutoff can leave lower-range tidal zones with few or no selected events. This project explores a zone-aware selection strategy that connects high-water candidates to locations used for coastal monitoring.
 
 ## My contribution
 
-I independently developed the analysis workflow, including data preparation, statistical event selection, geospatial site assignment, validation, and visualizations. The project connects modeled tidal information with 16 coastal monitoring sites in Groton, New London, and Stonington.
+I independently developed the analysis, from preparing the tidal data and designing the event-selection logic to mapping sites, checking zone assignments, comparing predictions, and presenting the results.
 
-## Approach
+## Workflow
 
-1. Prepare hourly predicted water levels for four coastal zones.
-2. Calculate a monthly regional 90th-percentile threshold and identify high-water candidates.
-3. Apply zone-specific fallback thresholds where the regional threshold yields too few candidates.
-4. Assign monitoring sites to zones using geographic boundaries and check assignments against nearest-zone distances.
-5. Compare selected high-tide times with the nearest NOAA-predicted high tide on the same day.
+1. **Prepare tidal data:** standardize hourly modeled water levels across four zones.
+2. **Identify high-water candidates:** calculate a monthly regional 90th-percentile threshold.
+3. **Adapt by zone:** apply fallback thresholds when a zone produces too few candidates.
+4. **Map monitoring sites:** assign 16 locations to zones and check against nearest-zone distances.
+5. **Compare timing:** match selected events to NOAA-predicted high tides on the same day.
 
-## Reported validation results
+## Results: timing comparison
 
-The project report gives the following comparison with NOAA **predicted** high-tide times in two zones. These are comparisons between predictions, not errors against observed flood events.
-
-| Zone | Mean absolute timing difference | Root mean square difference | Reported bias |
+| Validation zone | Mean absolute difference | Root mean square difference | Reported bias |
 |---|---:|---:|---:|
-| 2 | 7.00 minutes | 7.90 minutes | +7.00 minutes |
-| 3 | 3.75 minutes | 4.15 minutes | +3.75 minutes |
+| Zone 2 | 7.00 min | 7.90 min | +7.00 min |
+| Zone 3 | 3.75 min | 4.15 min | +3.75 min |
 
-The report describes positive bias as the model timing earlier than the NOAA prediction. The report refers to both December 2025 and a full-year comparison; the validation period and sample size should be confirmed before publication.
+![Comparison of reported high-tide timing metrics for Zones 2 and 3](assets/timing_comparison.png)
 
-![Timing comparison chart](assets/timing_comparison.png)
+*Metrics are reproduced from the project report and compare model times with NOAA **predictions**, not observed flood events. The report describes positive bias as the model predicting earlier than NOAA. Its references to the validation period differ, so the period and sample size still need confirmation.*
 
-*Chart recreated from the report’s summary metrics. Validation period and sample size remain to be confirmed.*
+## Skills demonstrated
 
-## Research report
+**Data science:** data cleaning, percentile-based event selection, statistical validation, time-series visualization  
+**Geospatial analysis:** location data preparation, spatial classification, distance checks, mapping  
+**Communication:** research reporting, visual explanation, and interpretation of results
 
-The full research report is available privately upon request.
+## Research context
 
-## Tools and skills
+This work was completed at CIRCA under the guidance of Dr. Yaprak Onat. Source code is not included in this public showcase.
 
-Python · data processing · statistical thresholding · geospatial analysis · mapping · time-series comparison · data visualization
-
-## Project status
-
-Research conducted at CIRCA. Source code and underlying research materials are private. Contact Hiral to discuss the project.
-
-## Acknowledgments
-
-Project advisor: Dr. Yaprak Onat. Supported by Connecticut Sea Grant, CIRCA, and CT NERR.
+**Acknowledgment:** Supported by Connecticut Sea Grant, CIRCA, and CT NERR.
